@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import Country from "../counttry/Country";
-
+import './Countries.css'
 
 const Countries = () => {
     const [countries,setCountries] =useState([]);
@@ -13,13 +13,15 @@ const Countries = () => {
     return (
       <div>
         <h3>Total Countries:{countries.length} </h3>
-        {
-          countries.map((country) => (
-            <Country key={country.cca3} country={country}></Country>
-          ))
-          // key na dile eslint error dekhaabe ejnno unique jinis key hisebe set kore dite hobe 
-          // props pathate hobe tai country k pathiye dilam
-        }
+        <div className="country-container">
+          {
+            countries.map((country) => (
+              <Country key={country.cca3} country={country}></Country>
+            ))
+            // key na dile eslint error dekhaabe ejnno unique jinis key hisebe set kore dite hobe
+            // props pathate hobe tai country k pathiye dilam
+          }
+        </div>
       </div>
     );
 };
