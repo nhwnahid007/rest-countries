@@ -4,3 +4,12 @@
     padding: 15px;
     border-radius: 15px;
 }
+
+.gap{
+    margin-top: 15px;
+    margin-bottom:15px;
+}
+
+.flag-container img{
+    width: 100px;
+}
